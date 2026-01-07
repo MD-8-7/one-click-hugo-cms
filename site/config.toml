@@ -1,0 +1,46 @@
+baseurl = "/"
+languageCode = "en-us"
+languageLang = "en"
+title = "Kaldi"
+
+# RSS, categories and tags disabled for an easy start
+# See configuration options for more details: 
+# https://gohugo.io/getting-started/configuration/#toml-configuration
+disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+[params]
+images = ["img/og-image.jpg"]
+# --- Add these menu entries at the end of site/config.toml ---
+
+[menu]
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 10
+
+[[menu.main]]
+  name = "Our partners"
+  url = "/our-partners/"
+  weight = 20
+
+[[menu.main]]
+  name = "Privacy"
+  url = "/privacy/"
+  weight = 30
+
+[[menu.main]]
+  name = "Affiliate"
+  url = "/affiliate-marketing/"
+  weight = 40
+
+# Footer links (optional)
+[[menu.footer]]
+  name = "Privacy"
+  url = "/privacy/"
+  weight = 10
+
+[[menu.footer]]
+  name = "Affiliate"
+  url = "/affiliate-marketing/"
+  weight = 20
