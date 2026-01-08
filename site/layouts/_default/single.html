@@ -1,6 +1,15 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" "/img/7.jpg" "title" "This is where the heading goes" "subtitle" "This is where the subtitle goes") }}
-{{ .Content }}
+  {{/* choose image: page param `image` if present, otherwise default */}}
+  {{ $image := .Params.image | default "/img/7.jpg" }}
+
+  {{/* choose subtitle: page param `subtitle` if present, otherwise description */}}
+  {{ $subtitle := cond (isset .Params "subtitle") .Params.subtitle .Description }}
+
+  {{ partial "jumbotron" (dict "imageUrl" $image "title" .Title "subtitle" $subtitle) }}
+
+  <div class="mw6 center ph3 pv4">
+    <div class="cms mw6" style="text-align:justify;">{{ .Content }}</div>
+  </div>
 
 {{ end }}
