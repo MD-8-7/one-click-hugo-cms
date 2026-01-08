@@ -1,12 +1,12 @@
-<footer class="bg-black ph3 pv4 white">
+<footer class="site-footer ph3 pv4" style="background:#f9fafb;color:var(--color-muted);">
 
 	<div class="mw7 center pt3">
 
 		<div class="measure-narrow center mb4">
 
-			<img src="/img/logo.svg" alt="Kaldi logo" class="db w4 center mb4 br0">
-			<p class="f3 lh-title light-gray b tc mb2">{{ .Site.Data.footer.title }}</p>
-			<p>{{ .Site.Data.footer.blurb }}</p>
+			<img src="/img/brand/logo-wordmark.svg" alt="The EcoHome Blog" class="db center mb4 br0" style="width:200px;height:auto;" />
+			<p class="f3 lh-title b tc mb2" style="color:var(--text);">{{ .Site.Data.footer.title }}</p>
+			<p style="color:var(--color-muted);">{{ .Site.Data.footer.blurb }}</p>
 
 			{{ partial "newsletter-form" . }}
 
@@ -15,31 +15,31 @@
 		<div class="flex-ns justify-between">
 
 			<div>
-				<h3 class="f4 b lh-title mb1 primary">Kaldi</h3>
-				<ul class="mb3">
-					<li><a href="/" class="link">Home</a></li>
-					<li><a href="/products" class="link">Our products</a></li>
-					<li><a href="/values" class="link">About</a></li>
-					<li><a href="/post" class="link">Blog</a></li>
-					<li><a href="/contact" class="link">Contact</a></li>
+				<h3 class="f4 b lh-title mb1" style="color:var(--color-primary);">The EcoHome Blog</h3>
+				<ul class="mb3" style="list-style:none;padding:0;">
+					<li><a href="/" class="link" style="color:var(--color-muted);text-decoration:none;">Home</a></li>
+					<li><a href="/products" class="link" style="color:var(--color-muted);text-decoration:none;">Our products</a></li>
+					<li><a href="/values" class="link" style="color:var(--color-muted);text-decoration:none;">About</a></li>
+					<li><a href="/post" class="link" style="color:var(--color-muted);text-decoration:none;">Blog</a></li>
+					<li><a href="/contact" class="link" style="color:var(--color-muted);text-decoration:none;">Contact</a></li>
 				</ul>
 			</div>
 
 			<div>
-				<h3 class="f4 b lh-title mb1 primary">Find out more</h3>
-				<ul class="mb3">
-					<li><a href="/post/jamaica-blue/" class="link">Latest offers</a></li>
-					<li><a href="/contact" class="link">Schedule an appointment</a></li>
+				<h3 class="f4 b lh-title mb1" style="color:var(--color-primary);">Find out more</h3>
+				<ul class="mb3" style="list-style:none;padding:0;">
+					<li><a href="/post/jamaica-blue/" class="link" style="color:var(--color-muted);text-decoration:none;">Latest offers</a></li>
+					<li><a href="/contact" class="link" style="color:var(--color-muted);text-decoration:none;">Schedule an appointment</a></li>
 				</ul>
 			</div>
 
 			<div>
-				<h3 class="f4 b lh-title mb2 primary">Social media</h3>
-				<ul class="mhn2">
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-facebook" "alt" "Kaldi on Facebook") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-twitter" "alt" "Kaldi on Twitter") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-instagram" "alt" "Kaldi on Instagram") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-vimeo" "alt" "Kaldi on Vimeo") }}
+				<h3 class="f4 b lh-title mb2" style="color:var(--color-primary);">Social media</h3>
+				<ul class="mhn2" style="list-style:none;padding:0;">
+					{{ partial "social-icon" (dict "link" "#" "svg" "icons-facebook" "alt" "The EcoHome Blog on Facebook") }}
+					{{ partial "social-icon" (dict "link" "#" "svg" "icons-twitter" "alt" "The EcoHome Blog on Twitter") }}
+					{{ partial "social-icon" (dict "link" "#" "svg" "icons-instagram" "alt" "The EcoHome Blog on Instagram") }}
+					{{ partial "social-icon" (dict "link" "#" "svg" "icons-vimeo" "alt" "The EcoHome Blog on Vimeo") }}
 				</ul>
 			</div>
 
