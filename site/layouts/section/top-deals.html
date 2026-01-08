@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+<div class="container" style="padding: 48px 16px;">
+  <header style="text-align: center; margin-bottom: 32px;">
+    <h1 style="color: var(--color-primary); margin: 0 0 12px; font-size: 36px;">{{ .Title }}</h1>
+    {{ with .Params.subtitle }}
+    <p style="color: var(--color-muted); font-size: 18px; margin: 0;">{{ . }}</p>
+    {{ end }}
+  </header>
+
+  {{ .Content }}
+</div>
+
+{{ end }}

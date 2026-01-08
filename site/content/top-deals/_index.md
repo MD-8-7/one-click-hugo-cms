@@ -7,27 +7,27 @@ description: "Landing page that aggregates current affiliate deals and recommend
 ---
 
 <div class="container" style="padding: 32px 16px;">
-  <div class="card-grid">
-    <!-- Product 1 -->
-    <div class="card">
-      <img src="/img/products/ecovac.jpg" alt="EcoVac 3000 - powerful suction vacuum cleaner" />
-      <div class="pad">
-        <h3>EcoVac 3000</h3>
-        <p>Powerful suction, long battery — best overall.</p>
-        <a href="https://affiliate.example.com/track/ecovac3000?utm_source=ecohome.blog&utm_medium=cta&utm_campaign=top-deals" rel="sponsored noopener" target="_blank" class="btn" aria-label="Buy EcoVac 3000 on affiliate site">Buy now ›</a>
-      </div>
-    </div>
+<div class="card-grid">
+<!-- Product 1 -->
+<div class="card">
+<img src="/img/products/ecovac.jpg" alt="EcoVac 3000 - powerful suction vacuum cleaner" />
+<div class="pad">
+<h3>EcoVac 3000</h3>
+<p>Powerful suction, long battery — best overall.</p>
+<a href="https://affiliate.example.com/track/ecovac3000?utm_source=ecohome.blog&utm_medium=cta&utm_campaign=top-deals" rel="sponsored noopener" target="_blank" class="btn" aria-label="Buy EcoVac 3000 on affiliate site">Buy now ›</a>
+</div>
+</div>
 
-    <!-- Product 2 -->
-    <div class="card">
-      <img src="/img/products/greenmaker.jpg" alt="GreenMaker Coffee Maker - eco-friendly coffee maker" />
-      <div class="pad">
-        <h3>GreenMaker Coffee Maker</h3>
-        <p>Great flavor, small footprint — top value pick.</p>
-        <a href="https://affiliate.example.com/track/greenmaker?utm_source=ecohome.blog&utm_medium=cta&utm_campaign=top-deals" rel="sponsored noopener" target="_blank" class="btn" aria-label="Buy GreenMaker Coffee Maker on affiliate site">Buy now ›</a>
-      </div>
-    </div>
-  </div>
+<!-- Product 2 -->
+<div class="card">
+<img src="/img/products/greenmaker.jpg" alt="GreenMaker Coffee Maker - eco-friendly coffee maker" />
+<div class="pad">
+<h3>GreenMaker Coffee Maker</h3>
+<p>Great flavor, small footprint — top value pick.</p>
+<a href="https://affiliate.example.com/track/greenmaker?utm_source=ecohome.blog&utm_medium=cta&utm_campaign=top-deals" rel="sponsored noopener" target="_blank" class="btn" aria-label="Buy GreenMaker Coffee Maker on affiliate site">Buy now ›</a>
+</div>
+</div>
+</div>
 
-  <p style="text-align: center; color: var(--color-muted); margin-top: 24px;">More deals added regularly — check back for latest discounts.</p>
+<p style="text-align: center; color: var(--color-muted); margin-top: 24px;">More deals added regularly — check back for latest discounts.</p>
 </div>
