@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 60" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">The EcoHome Blog</title>
+  <desc id="logoDesc">Logo featuring a leaf and home icon with The EcoHome Blog wordmark</desc>
+  
+  <!-- Icon Mark: Leaf + Home -->
+  <g transform="translate(0, 10)">
+    <!-- Home shape -->
+    <path d="M20 40 L5 25 L20 10 L35 25 L35 40 Z" fill="#2b7a3a" stroke="#2b7a3a" stroke-width="1.5" stroke-linejoin="round"/>
+    <rect x="15" y="28" width="10" height="12" fill="#fff"/>
+    
+    <!-- Leaf -->
+    <path d="M28 18 Q32 12 38 15 Q40 20 36 24 Q32 26 28 23 Z" fill="#2b7a3a" opacity="0.9"/>
+    <path d="M28 18 L36 24" stroke="#fff" stroke-width="0.8" opacity="0.4"/>
+  </g>
+  
+  <!-- Wordmark Text -->
+  <text x="55" y="38" font-family="'Nunito Sans', Arial, sans-serif" font-size="22" font-weight="700" fill="#2b7a3a">
+    The EcoHome Blog
+  </text>
+</svg>
