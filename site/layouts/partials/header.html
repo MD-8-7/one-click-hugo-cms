@@ -1,0 +1,74 @@
+<header class="site-header">
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:space-between;">
+      <!-- Logo/Wordmark -->
+      <a href="/" class="logo" aria-label="The EcoHome Blog home">
+        <img src="/img/brand/logo-wordmark.svg" alt="The EcoHome Blog" style="height:44px;width:auto;" />
+      </a>
+
+      <!-- Mobile menu toggle -->
+      <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Main navigation -->
+      <nav class="site-nav" id="main-nav" aria-label="Main navigation">
+        {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+      </nav>
+    </div>
+  </div>
+</header>
+
+<style>
+  /* Mobile menu styles */
+  @media (max-width: 768px) {
+    .mobile-menu-toggle {
+      display: block !important;
+    }
+    .site-nav {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: none;
+      flex-direction: column;
+      padding: 12px 0;
+      z-index: 1000;
+    }
+    .site-nav.active {
+      display: flex;
+    }
+    .site-nav a {
+      margin: 0;
+      padding: 12px 24px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .site-nav a:last-child {
+      border-bottom: none;
+    }
+  }
+</style>
+
+<script>
+  // Mobile menu toggle
+  (function() {
+    var toggle = document.getElementById('mobile-menu-toggle');
+    var nav = document.getElementById('main-nav');
+    
+    if (toggle && nav) {
+      toggle.addEventListener('click', function() {
+        var isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !isExpanded);
+        nav.classList.toggle('active');
+      });
+    }
+  })();
+</script>
