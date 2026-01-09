@@ -1,0 +1,50 @@
+<header class="site-header">
+  <div class="header-inner">
+    <!-- Logo -->
+    <a href="/" aria-label="The EcoHome Blog home">
+      <img src="/img/brand/logo-wordmark.svg" alt="The EcoHome Blog" class="site-logo">
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav>
+      {{ if .Site.Menus.main }}
+      <ul class="site-nav" id="siteNav">
+        {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+      {{ end }}
+    </nav>
+
+    <!-- Mobile Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<script>
+// Mobile nav toggle
+(function() {
+  var hamburger = document.getElementById('hamburger');
+  var nav = document.getElementById('siteNav');
+  if (hamburger && nav) {
+    hamburger.addEventListener('click', function() {
+      nav.classList.toggle('active');
+      hamburger.classList.toggle('active');
+      var expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !expanded);
+    });
+    // Close nav when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+        nav.classList.remove('active');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+})();
+</script>
