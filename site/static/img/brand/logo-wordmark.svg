@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 60" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">The EcoHome Blog</title>
+  <defs>
+    <style>
+      .wordmark-text { 
+        font-family: 'Nunito Sans', sans-serif; 
+        font-weight: 800; 
+        fill: #2b7a3a; 
+      }
+      .wordmark-accent { 
+        fill: #ff7a3d; 
+      }
+    </style>
+  </defs>
+  <text x="10" y="35" class="wordmark-text" font-size="28">
+    The <tspan class="wordmark-accent">Eco</tspan>Home Blog
+  </text>
+</svg>
