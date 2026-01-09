@@ -3,48 +3,102 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Top Deals — EcoHome</title>
+  <title>Top Deals — The EcoHome Blog</title>
   <meta name="description" content="Current top deals and discounts" />
-  <style>
-    body{font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:#f7f7f7;color:#111;margin:0;padding:20px}
-    .mw{max-width:1100px;margin:0 auto}
-    .grid{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
-    .card{background:#fff;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.06);width:320px;overflow:hidden}
-    .card img{width:100%;height:200px;object-fit:cover;display:block}
-    .card .pad{padding:16px}
-    .btn{display:inline-block;background:#ff7a3d;color:#fff;padding:10px 14px;border-radius:6px;text-decoration:none}
-    .muted{color:#666;font-size:0.95rem}
-    header{margin-bottom:18px;text-align:center}
-  </style>
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap" rel="stylesheet">
+  
+  <!-- Brand stylesheet -->
+  <link rel="stylesheet" href="/css/brand.css">
+  
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+  <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#2b7a3a">
+  <meta name="theme-color" content="#fff">
 </head>
 <body>
-  <div class="mw">
-    <header>
-      <h1>Top Deals</h1>
-      <p class="muted">Our current top deals and discounts — links are affiliate links and may earn us a small commission at no cost to you.</p>
-    </header>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" aria-label="The EcoHome Blog home">
+        <img src="/img/brand/logo-wordmark.svg" alt="The EcoHome Blog" class="site-logo">
+      </a>
+    </div>
+  </header>
 
-    <div class="grid">
+  <div class="container py-4">
+    <div class="text-center mb-4">
+      <h1>Top Deals</h1>
+      <p class="text-muted">Our current top deals and discounts — links are affiliate links and may earn us a small commission at no cost to you.</p>
+    </div>
+
+    <div class="card-grid">
       <div class="card">
-        <img src="/img/products/ecovac.jpg" alt="EcoVac 3000">
-        <div class="pad">
-          <h3>EcoVac 3000</h3>
-          <p class="muted">Powerful suction, long battery — best overall.</p>
-          <p style="margin:10px 0"><a class="btn" href="https://affiliate.example.com/track/ecovac3000?utm_source=ecohome.blog&utm_medium=cta&utm_campaign=top-deals" rel="sponsored noopener" target="_blank">Buy now ›</a></p>
+        <img src="/img/products/ecovac.jpg" alt="EcoVac 3000" class="card-img">
+        <div class="card-body">
+          <h3 class="card-title">EcoVac 3000</h3>
+          <p class="card-text">Powerful suction, long battery — best overall.</p>
+          <a class="btn" href="https://affiliate.example.com/track/ecovac3000?utm_source=ecohome.blog&utm_medium=cta&utm_campaign=top-deals" rel="sponsored noopener" target="_blank" aria-label="Buy EcoVac 3000">Buy now ›</a>
         </div>
       </div>
 
       <div class="card">
-        <img src="/img/products/greenmaker.jpg" alt="GreenMaker Coffee Maker">
-        <div class="pad">
-          <h3>GreenMaker Coffee Maker</h3>
-          <p class="muted">Great flavor, small footprint — top value pick.</p>
-          <p style="margin:10px 0"><a class="btn" href="https://affiliate.example.com/track/greenmaker?utm_source=ecohome.blog&utm_medium=cta&utm_campaign=top-deals" rel="sponsored noopener" target="_blank">Buy now ›</a></p>
+        <img src="/img/products/greenmaker.jpg" alt="GreenMaker Coffee Maker" class="card-img">
+        <div class="card-body">
+          <h3 class="card-title">GreenMaker Coffee Maker</h3>
+          <p class="card-text">Great flavor, small footprint — top value pick.</p>
+          <a class="btn" href="https://affiliate.example.com/track/greenmaker?utm_source=ecohome.blog&utm_medium=cta&utm_campaign=top-deals" rel="sponsored noopener" target="_blank" aria-label="Buy GreenMaker Coffee Maker">Buy now ›</a>
         </div>
       </div>
     </div>
 
-    <p class="muted" style="text-align:center;margin-top:18px">More deals added regularly — check back for the latest discounts.</p>
+    <p class="text-center text-muted mt-4">More deals added regularly — check back for the latest discounts.</p>
   </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content text-center">
+      <img src="/img/brand/logo-wordmark.svg" alt="The EcoHome Blog" class="footer-logo" style="display: block; margin: 0 auto;">
+      <p class="text-muted text-sm mt-2">&copy; 2026 The EcoHome Blog. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+  // Affiliate click tracking: pushes to dataLayer for GTM and falls back to gtag if present.
+  // Listens for clicks on <a> that include rel="sponsored" (per our link convention).
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[rel~="sponsored"]');
+    if(!a) return;
+    try{
+      var affiliateId = a.getAttribute('data-affiliate') || '';
+      var href = a.href || '';
+      // dataLayer push for GTM
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'affiliate_click',
+        affiliate_id: affiliateId,
+        href: href,
+        page_path: window.location.pathname
+      });
+      // Optional GA4 fallback if gtag is available
+      if(window.gtag){
+        gtag('event', 'affiliate_click', {
+          event_category: 'affiliate',
+          event_label: affiliateId || href,
+          value: 1
+        });
+      }
+    }catch(err){
+      // fail silently
+      console.warn('Affiliate tracking error', err);
+    }
+  }, false);
+  </script>
 </body>
 </html>
