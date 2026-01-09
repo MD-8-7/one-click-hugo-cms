@@ -1,0 +1,27 @@
+<svg viewBox="0 0 280 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">The EcoHome Blog</title>
+  <desc id="logoDesc">The EcoHome Blog logo featuring a leaf icon and wordmark</desc>
+  
+  <!-- Leaf Icon -->
+  <g id="leaf-icon">
+    <path d="M30 10 C30 10, 15 15, 15 30 C15 40, 22 48, 30 50 C38 48, 45 40, 45 30 C45 15, 30 10, 30 10 Z" 
+          fill="#2b7a3a" opacity="0.9"/>
+    <path d="M30 15 L30 48" stroke="#1a5a28" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M30 25 Q35 28, 40 30" stroke="#1a5a28" stroke-width="1" stroke-linecap="round" fill="none"/>
+    <path d="M30 35 Q25 37, 20 38" stroke="#1a5a28" stroke-width="1" stroke-linecap="round" fill="none"/>
+  </g>
+  
+  <!-- Text: "The EcoHome Blog" -->
+  <g id="wordmark" fill="#0f1720" font-family="'Nunito Sans', sans-serif" font-weight="700">
+    <!-- "The" -->
+    <text x="65" y="25" font-size="14" font-weight="400" fill="#6b6b6b">The</text>
+    
+    <!-- "EcoHome" -->
+    <text x="65" y="42" font-size="20" letter-spacing="0.5">
+      <tspan fill="#2b7a3a">Eco</tspan><tspan>Home</tspan>
+    </text>
+    
+    <!-- "Blog" -->
+    <text x="190" y="42" font-size="20" fill="#ff7a3d" letter-spacing="0.5">Blog</text>
+  </g>
+</svg>
